@@ -1,4 +1,8 @@
-public abstract class AnimalBase implements iLive {
+public abstract class AnimalBase implements Ialive {
+
+    public String toString(){ //So if I type this here, all Animals will automatically be printed as a name.
+        return name;
+    }
 
     protected String name;
     protected String dominantColour;

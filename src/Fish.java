@@ -1,4 +1,4 @@
-public class Fish extends AnimalBase implements iSwim{
+public class Fish extends AnimalBase implements Iswim, IwaterBreathable{
 
     protected int numberOfFins;
 
@@ -12,5 +12,15 @@ public class Fish extends AnimalBase implements iSwim{
 
     public double MaxSpeedSwimming(double currentPower, double fatigue) {
         return 0;
+    }
+
+
+    public void canBreatheUnderWater() {
+
+    }
+
+    @Override //This piece of code tells the compiler that an ArrayList of with a fish in it needs to be printed as a name, otherwise I would just get a memory location
+    public String toString() {
+        return name;
     }
 }

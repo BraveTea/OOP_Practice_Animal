@@ -1,4 +1,4 @@
-public class Duck extends Bird implements iMoveOnLand, iFly, iSwim{
+public class Duck extends Bird implements ImoveOnLand, Ifly, Iswim {
 
     Duck(String name, String dominantColour, int numberOfLegs, double age, boolean sentience, boolean alive, boolean predator) {
         super(name, dominantColour, numberOfLegs, age, sentience, alive, predator);

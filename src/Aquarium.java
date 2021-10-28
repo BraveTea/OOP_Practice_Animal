@@ -1,7 +1,21 @@
-public class Aquarium extends HabitatBase implements iSustainsSwimming{
+import java.util.ArrayList;
 
-    protected Aquarium(String name, String primaryEcoSystem, String secondaryEcoSystem) {
-        super(name, primaryEcoSystem, secondaryEcoSystem);
+public class Aquarium extends HabitatBase implements IsustainsSwimming {
+
+    public ArrayList<IwaterBreathable> allIwaterBreathableAnimals = new ArrayList<>();
+
+
+    Aquarium(String name, double minTemp, double maxTemp) {
+        super(name, minTemp, maxTemp);
+    }
+
+    public void addAnimal(IwaterBreathable animal){
+//        if (animal instanceof IwaterBreathable) {
+            allIwaterBreathableAnimals.add(animal);
+//        }
+//        else{
+//            System.out.printf("%s has not been added for it cannot breathe under water.", animal);
+//        }
     }
 
 
@@ -10,6 +24,6 @@ public class Aquarium extends HabitatBase implements iSustainsSwimming{
     }
 
     public void hasWaterBasedSustenance() {
-        
+
     }
 }

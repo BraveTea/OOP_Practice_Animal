@@ -1,4 +1,4 @@
-public class Bird_Classic extends Bird implements iFly, iMoveOnLand{
+public class Bird_Classic extends Bird implements Ifly, ImoveOnLand {
 
     Bird_Classic(String name, String dominantColour, int numberOfLegs, double age, boolean sentience, boolean alive, boolean predator) {
         super(name, dominantColour, numberOfLegs, age, sentience, alive, predator);
