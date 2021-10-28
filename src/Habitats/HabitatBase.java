@@ -1,6 +1,10 @@
-import java.io.StringBufferInputStream;
+package Habitats;
 
-public abstract class HabitatBase {
+import java.util.ArrayList;
+
+public abstract class HabitatBase<T> {
+
+
 
     private String name;
     private double minTemp;
@@ -34,6 +38,13 @@ public abstract class HabitatBase {
 
     public double getMaxTemp() {
         return maxTemp;
+    }
+
+
+    public ArrayList<T> animals = new ArrayList<>();
+
+    public void addAnimal(T animal){
+        animals.add(animal);
     }
 }
 

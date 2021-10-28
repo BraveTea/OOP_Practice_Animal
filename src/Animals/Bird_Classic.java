@@ -1,3 +1,8 @@
+package Animals;
+
+import interfaces.Ifly;
+import interfaces.ImoveOnLand;
+
 public class Bird_Classic extends Bird implements Ifly, ImoveOnLand {
 
     Bird_Classic(String name, String dominantColour, int numberOfLegs, double age, boolean sentience, boolean alive, boolean predator) {
@@ -5,12 +10,7 @@ public class Bird_Classic extends Bird implements Ifly, ImoveOnLand {
     }
 
     public void Fly() {
-
-    }
-
-
-    public double MaxSpeedFlying(double airResistance, double fatigue) {
-        return 0;
+        System.out.printf("%s is flying", name);
     }
 
 
@@ -18,8 +18,4 @@ public class Bird_Classic extends Bird implements Ifly, ImoveOnLand {
 
     }
 
-
-    public double maxSpeedLand(double gradientGround, double fatigue) {
-        return 0;
-    }
 }
