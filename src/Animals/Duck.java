@@ -1,11 +1,8 @@
 package Animals;
 
-import interfaces.Ifly;
-import interfaces.IliveOnLand;
-import interfaces.ImoveOnLand;
-import interfaces.Iswim;
+import interfaces.*;
 
-public class Duck extends Bird implements ImoveOnLand, Ifly, Iswim, IliveOnLand {
+public class Duck extends Bird implements ImoveOnLand, Ifly, IliveOnLand, IswimOnWater {
 
     public Duck(String name, String dominantColour, int numberOfLegs, double age, boolean sentience, boolean alive, boolean predator) {
         super(name, dominantColour, numberOfLegs, age, sentience, alive, predator);
@@ -20,11 +17,12 @@ public class Duck extends Bird implements ImoveOnLand, Ifly, Iswim, IliveOnLand 
 
     }
 
-    public void Swim() {
+
+    public void canLiveOnLand() {
 
     }
 
-    public void canLiveOnLand() {
+    public void canSwimOnWater() {
 
     }
 }

@@ -16,6 +16,13 @@ public abstract class HabitatBase<T> {
         this.maxTemp = maxTemp;
     }
 
+
+    public ArrayList<T> animals = new ArrayList<>();
+
+    public void addAnimal(T animal){
+        animals.add(animal);
+    }
+
     public void setName(String name){
         this.name = name;
     }
@@ -41,10 +48,5 @@ public abstract class HabitatBase<T> {
     }
 
 
-    public ArrayList<T> animals = new ArrayList<>();
-
-    public void addAnimal(T animal){
-        animals.add(animal);
-    }
 }
 
