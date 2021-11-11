@@ -1,6 +1,8 @@
 import Animals.*;
 import Habitats.*;
 
+import java.util.ArrayList;
+
 public class Programme {
 
     public static void main(String[] args){
@@ -28,9 +30,35 @@ public class Programme {
 
         duck1.consume();
 
-        if (duck1.isPredator() == false) {
+        if (!duck1.isPredator()) {
             System.out.printf("%s is not a predator%n", duck1.getName());
         }
+
+        ArrayList<HabitatBase> habitats = new ArrayList<>();
+        habitats.add(0, aquarium1);
+        habitats.add(1, jungle1);
+
+
+
+        for (int i = 0; i < habitats.size(); i++){
+            System.out.printf("The animals in %s are called:", habitats.get(i).getName());
+            System.out.println(habitats.get(i).animals);
+        }
+
+        ArrayList<String> allAnimals = new ArrayList<>();
+
+        for (int i = 0; i < habitats.size(); i++){
+            for (int j = 0; j < habitats.get(i).animals.size(); j++){
+                String animal = habitats.get(i).animals.get(j).toString();
+                System.out.print(animal);
+                System.out.printf(" lives in %s%n", habitats.get(i).getName());
+                allAnimals.add(animal);
+
+            }
+        }
+
+        System.out.println(allAnimals);
+
 
         //TODO dit moet ik nog uitwerken, want dit werk niet :(
 //        for (int i =0; i<jungle1.animals.size(); i++){
